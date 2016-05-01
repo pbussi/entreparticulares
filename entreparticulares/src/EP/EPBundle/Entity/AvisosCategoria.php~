@@ -1,0 +1,46 @@
+<?php
+
+namespace EP\EPBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * AvisosCategoria
+ *
+ * @ORM\Table(name="avisos_categoria", indexes={@ORM\Index(name="fk_avisos_categoria_aviso_idx", columns={"aviso_id"}), @ORM\Index(name="fk_avisos_categoria_categorias1_idx", columns={"categoria_id"})})
+ * @ORM\Entity
+ */
+class AvisosCategoria
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Aviso
+     *
+     * @ORM\ManyToOne(targetEntity="Aviso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="aviso_id", referencedColumnName="id")
+     * })
+     */
+    private $aviso;
+
+    /**
+     * @var \Categoria
+     *
+     * @ORM\ManyToOne(targetEntity="Categoria")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="categoria_id", referencedColumnName="id")
+     * })
+     */
+    private $categoria;
+
+
+}
+

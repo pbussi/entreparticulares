@@ -1,0 +1,4 @@
+services:
+#    ep.example:
+#        class: EP\EPBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
