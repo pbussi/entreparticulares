@@ -1,3 +1,8 @@
+ep:
+    resource: "@EPBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
