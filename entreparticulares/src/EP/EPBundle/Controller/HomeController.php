@@ -18,7 +18,7 @@ class HomeController  extends Controller
 
         return $this->render(
         'home/main.html.twig',
-        array('luckyNumberList' => $number)
+        array('number' => $number)
     );
     }
 }
