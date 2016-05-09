@@ -1,0 +1,4 @@
+<service id="twig.extension.ep.epbundle.nomenclador_extension" class="EP\EPBundle\Twig\Extension\NomencladorExtension">
+    <tag name="twig.extension" />
+    <argument type="service" id="doctrine.orm.entity_manager" />
+</service>
