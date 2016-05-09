@@ -4,6 +4,10 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    twig.extension.ep.epbundle.nomenclador_extension:
+        class: EP\EPBundle\Twig\Extension\NomencladorExtension
+        tags:
+            - { name: twig.extension }
+        arguments: 
+        #["service", "doctrine.orm.entity_manager"]
+            doctrine: "@doctrine"
